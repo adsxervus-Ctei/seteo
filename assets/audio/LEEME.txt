@@ -1,0 +1,1 @@
+Deje aquí sus archivos .mp3 (sencillo-1.mp3, sencillo-2.mp3, ...) y ajuste los títulos en lib/manifest.js

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>K-LIBRE VALLENATO — Espectáculo en vivo</title>
+<meta name="description" content="K-LIBRE VALLENATO. Organización musical del Sur de Bolívar: espectáculo en vivo de primer nivel, efectos y pirotecnia. Contrataciones." />
+<link rel="icon" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=20260707" />
+</head>
+<body>
+
+<!-- ===== SPLASH ===== -->
+<div id="splash" class="splash">
+  <img src="assets/img/logo.webp" alt="" class="splash-logo" />
+</div>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo"><img src="assets/img/logo.webp" alt="K-Libre Vallenato" /></a>
+  <div class="nav-actions">
+    <a class="btn btn-video nav-video" data-video href="#">▶ Ver video</a>
+    <a class="btn btn-primary nav-cta" data-wa href="#" target="_blank" rel="noopener">Reservar fecha</a>
+  </div>
+</header>
+
+<!-- ===== HERO (parte superior) ===== -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img class="hero-fallback" src="assets/img/hero-poster.webp" alt="" />
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.webp">
+      <source src="assets/video/hero-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-tint"></div>
+    <div class="hero-vignette"></div>
+  </div>
+  <div class="hero-inner">
+    <h1 class="sr-only">K-Libre Vallenato — Organización musical y espectáculos en vivo</h1>
+    <img src="assets/img/logo.webp" alt="K-Libre Vallenato" class="hero-logo reveal" />
+    <p class="hero-kicker reveal">· Organización musical ·</p>
+    <div class="hero-sub reveal">
+      <p class="hs-line">Espectáculo en vivo de primer nivel</p>
+      <p class="hs-strong">Voz, acordeón y parranda</p>
+    </div>
+    <div class="hero-actions reveal">
+      <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      <a class="btn btn-video" data-video href="#">▶ Ver video</a>
+      <a class="btn btn-ghost" data-pdf href="#">Descargar propuesta</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REPRODUCTOR DE AUDIO FIJO (sencillos) ===== -->
+<div class="audiobar" id="audiobar">
+  <div class="ab-playlist" id="abPlaylist" aria-hidden="true"></div>
+  <div class="ab-inner">
+    <div class="ab-head">
+      <span class="ab-eq"><i></i><i></i><i></i><i></i></span>
+      <span class="ab-title">Escucha nuestros sencillos</span>
+    </div>
+    <button class="ab-play" id="abPlay" aria-label="Reproducir">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+    </button>
+    <div class="ab-now">
+      <span class="ab-track" id="abTrack">Selecciona una canción</span>
+      <div class="ab-progress" id="abProgress"><div class="ab-fill" id="abFill"></div></div>
+    </div>
+    <button class="ab-toggle" id="abToggle" aria-label="Ver lista">Lista ▲</button>
+  </div>
+  <audio id="abAudio" preload="none"></audio>
+</div>
+
+<!-- ===== VIDEO FLOTANTE (YouTube, mismo efecto que la galería) ===== -->
+<div class="lightbox video-lb" id="videoLb" aria-hidden="true">
+  <button class="lb-close" id="vlbClose" aria-label="Cerrar">✕</button>
+  <div class="vlb-frame"><div class="vlb-mount" id="vlbMount"></div></div>
+</div>
+
+<script defer src="lib/gsap.min.js"></script>
+<script defer src="lib/ScrollTrigger.min.js"></script>
+<script defer src="lib/manifest.js"></script>
+<script defer src="main.js?v=20260707"></script>
+</body>
+</html>

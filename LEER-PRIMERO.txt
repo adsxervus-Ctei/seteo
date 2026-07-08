@@ -1,0 +1,40 @@
+K-LIBRE VALLENATO — Sitio web (portada + video por YouTube)
+===========================================================
+
+>>> PASO IMPORTANTE: ACTIVAR EL VIDEO <<<
+1. Suba su video a YouTube (puede dejarlo como "No listado":
+   no aparece en búsquedas, pero sí se puede insertar en la web).
+2. Copie el enlace del video. Se ve así:
+   https://www.youtube.com/watch?v=AbCdEfG1234
+3. El ID es lo que va después de "watch?v="  ->  AbCdEfG1234
+4. Abra el archivo  lib/manifest.js  con el Bloc de notas.
+5. Pegue el ID entre las comillas del campo youtubeId, así:
+        youtubeId: "AbCdEfG1234",
+6. Guarde. Listo: el botón "Ver video" abrirá su video en la
+   ventana flotante, sin peso extra en su web.
+
+(En YouTube: al subir el video, deje activada la opción
+ "Permitir inserción/embedding" — viene activada por defecto.)
+
+PUBLICAR EN HOSTINGER
+1. Entre al Administrador de archivos (o por FTP).
+2. Suba TODO el contenido de esta carpeta a "public_html".
+3. Su sitio queda en su dominio.
+
+OTROS DATOS
+- WhatsApp y propuesta PDF se editan también en  lib/manifest.js .
+- El botón "Descargar propuesta" entrega el PDF de la carpeta  propuesta/ .
+
+REPRODUCTOR DE AUDIO — "Escucha nuestros sencillos"
+Sus 5 canciones ya están configuradas. Solo debe subir los archivos .mp3
+a la carpeta  assets/audio/  con ESTOS nombres exactos (todo en minúscula):
+
+   inmigrante.mp3        -> "Inmigrante"
+   el-copete.mp3         -> "El Copete (Cover)"
+   vive-tu-vida.mp3      -> "Vive tu vida (Cover)"
+   la-varita.mp3         -> "La Varita"
+   va-pa-esa.mp3         -> "Va pa' esa"
+
+Importante: use nombres SIN espacios ni paréntesis en el archivo (como los de
+arriba); así el reproductor los encuentra siempre. El título que ve el público
+(a la derecha) ya está puesto y se edita en lib/manifest.js si desea cambiarlo.
